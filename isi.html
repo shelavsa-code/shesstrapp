@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Products - SHES Strap</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #fff5f7; color: #333; padding: 20px; margin: 0; }
+    h2 { color: #c94c62; text-align: center; margin-bottom: 20px; }
+    
+    /* Grid Kartu Produk (Bukan Tabel) */
+    .container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; max-width: 850px; margin: auto; }
+    .product-card { background: white; border-radius: 15px; border: 1px solid #ffccd5; padding: 15px; width: 250px; box-shadow: 0 4px 10px rgba(0,0,0,0.04); text-align: center; }
+    .product-card img { width: 100%; height: 140px; object-fit: cover; border-radius: 10px; }
+    .title { font-weight: bold; color: #c94c62; margin: 10px 0 5px 0; font-size: 15px; }
+    .price-tag { font-weight: bold; color: #333; font-size: 14px; margin-bottom: 10px; }
+    
+    /* Form Pemesanan di Setiap Produk */
+    .form-group { text-align: left; font-size: 11px; margin-bottom: 8px; font-weight: bold; color: #555; }
+    select, input { width: 100%; padding: 6px; border: 1px solid #ffccd5; border-radius: 6px; font-size: 11px; box-sizing: border-box; background: #fff9fa; margin-top: 2px; }
+    
+    .total-box { background: #fff0f3; padding: 6px; border-radius: 6px; font-weight: bold; color: #c94c62; font-size: 12px; margin: 10px 0; }
+    .btn-buy { background: #c94c62; color: white; border: none; padding: 8px; width: 100%; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 12px; }
+    .btn-buy:hover { background: #a3384c; }
+  </style>
+  <script>
+    function hitungTotal(harga, qtyId, totalId) {
+      var qty = document.getElementById(qtyId).value;
+      var total = harga * qty;
+      document.getElementById(totalId).innerText = "Total: Rp " + total.toLocaleString('id-ID');
+    }
+  </script>
+</head>
+<body>
+
+  <h2>Katalog Products SHES Strap (Handmade)</h2>
+
+  <div class="container">
+
+    <!-- PRODUK 1 -->
+    <div class="product-card">
+      <img src="decent mobile charm.jpg" alt="Decent Strap">
+      <div class="title"> Phone Strap Mutiara Berwarna</div>
+      <div class="price-tag">Harga: Rp 15.000</div>
+      
+      <div class="form-group">
+        <label>Pilih Warna:</label>
+        <select>
+          <option value="pink">Pink Soft</option>
+          <option value="putih">Putih Mutiara</option>
+          <option value="ungu">Ungu / Lilac</option>
+          <option value="biru">Biru Muda</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Jumlah (Qty):</label>
+        <input type="number" id="qty1" value="1" min="1" onchange="hitungTotal(15000, 'qty1', 'total1')" onkeyup="hitungTotal(15000, 'qty1', 'total1')">
+      </div>
+
+      <div class="form-group">
+        <label>Metode Pembayaran:</label>
+        <select>
+          <option value="qris">QRIS / Dana / ShopeePay</option>
+          <option value="cod">COD (Bayar di Tempat / Stand)</option>
+          <option value="tf">Transfer Bank</option>
+        </select>
+      </div>
+
+      <div class="total-box" id="total1">Total: Rp 15.000</div>
+      <button class="btn-buy" onclick="alert('Terima kasih! Pesanan Decent Strap kamu sudah diproses.')">Beli Sekarang</button>
+    </div>
+
+    <!-- PRODUK 2 -->
+    <div class="product-card">
+      <img src="strap phone.jpg" alt="Strap Phone Unik">
+      <div class="title">Aesthetic Beads Strap</div>
+      <div class="price-tag">Harga: Rp 20.000</div>
+      
+      <div class="form-group">
+        <label>Pilih Warna:</label>
+        <select>
+          <option value="pink">Pink Soft</option>
+          <option value="putih">Putih Mutiara</option>
+          <option value="ungu">Ungu / Lilac</option>
+          <option value="biru">Biru Muda</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Jumlah (Qty):</label>
+        <input type="number" id="qty2" value="1" min="1" onchange="hitungTotal(20000, 'qty2', 'total2')" onkeyup="hitungTotal(20000, 'qty2', 'total2')">
+      </div>
+
+      <div class="form-group">
+        <label>Metode Pembayaran:</label>
+        <select>
+          <option value="qris">QRIS / Dana / ShopeePay</option>
+          <option value="cod">COD (Bayar di Tempat / Stand)</option>
+          <option value="tf">Transfer Bank</option>
+        </select>
+      </div>
+
+      <div class="total-box" id="total2">Total: Rp 20.000</div>
+      <button class="btn-buy" onclick="alert('Terima kasih! Pesanan Aesthetic Strap kamu sudah diproses.')">Beli Sekarang</button>
+    </div>
+
+    <!-- PRODUK 4 -->
+    <div class="product-card">
+      <img src="phone strap lucu karakter _mix premi luxury.jpg"  alt="Phone Strap Karakter">
+      <div class="title">Phone Strap Karakter</div>
+      <div class="price-tag">Harga: Rp 25.000</div>
+      
+      <div class="form-group">
+        <label>Pilih Karakter :</label>
+        <select>
+          <option value="kuromi">Kuromi</option>
+          <option value="pompompurin">pompompurin</option>
+          <option value="cinamoroll">Ungu / cinamoroll</option>
+          <option value="melody">melody</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Jumlah (Qty):</label>
+        <input type="number" id="qty3" value="1" min="1" onchange="hitungTotal(28000, 'qty3', 'total3')" onkeyup="hitungTotal(28000, 'qty3', 'total3')">
+      </div>
+
+      <div class="form-group">
+        <label>Metode Pembayaran:</label>
+        <select>
+          <option value="qris">QRIS / Dana / ShopeePay</option>
+          <option value="cod">COD (Bayar di Tempat / Stand)</option>
+          <option value="tf">Transfer Bank</option>
+        </select>
+      </div>
+
+      <div class="total-box" id="total3">Total: Rp 28.000</div>
+      <button class="btn-buy" onclick="alert('Terima kasih! Pesanan Custom Name Strap kamu sudah diproses.')">Beli Sekarang</button>
+    </div>
+
+<!-- PRODUK 3 -->
+    <div class="product-card">
+      <img src="custom.jpg" onerror="this.src='https://placehold.co/250x150/ffccd5/c94c62?text=Custom+Strap'" alt="Custom Strap">
+      <div class="title">Custom Name Strap</div>
+      <div class="price-tag">Harga: Rp 25.000</div>
+      
+      <div class="form-group">
+        <label>Pilih Warna Utama:</label>
+        <select>
+          <option value="pink">Pink Soft</option>
+          <option value="putih">Putih Mutiara</option>
+          <option value="ungu">Ungu / Lilac</option>
+          <option value="biru">Biru Muda</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Jumlah (Qty):</label>
+        <input type="number" id="qty3" value="1" min="1" onchange="hitungTotal(28000, 'qty3', 'total3')" onkeyup="hitungTotal(28000, 'qty3', 'total3')">
+      </div>
+
+      <div class="form-group">
+        <label>Metode Pembayaran:</label>
+        <select>
+          <option value="qris">QRIS / Dana / ShopeePay</option>
+          <option value="cod">COD (Bayar di Tempat / Stand)</option>
+          <option value="tf">Transfer Bank</option>
+        </select>
+      </div>
+
+      <div class="total-box" id="total3">Total: Rp 28.000</div>
+      <button class="btn-buy" onclick="alert('Terima kasih! Pesanan Custom Name Strap kamu sudah diproses.')">Beli Sekarang</button>
+    </div>
+
+
+
+  </div>
+
+</body>
+</html>

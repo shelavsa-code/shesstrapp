@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>SHES Strap - ASAS Informatika</title>
+  <style>
+    body { 
+      font-family: 'Segoe UI', sans-serif; 
+      background: #fff5f7; 
+      margin: 0; 
+      padding: 0; 
+    }
+    /* Header & Menu Navigasi di Atas */
+    header {
+      background: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #ffccd5;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    }
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #c94c62;
+    }
+    nav a {
+      text-decoration: none;
+      color: #555;
+      font-weight: bold;
+      font-size: 13px;
+      margin-left: 20px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background: #fff0f3;
+      color: #c94c62;
+    }
+    /* Kotak Iframe Luas agar Tampilan Pas */
+    .content-frame {
+      width: 100%;
+      height: 550px;
+      border: none;
+      background: #fff5f7;
+    }
+    /* Footer Bawah */
+    footer {
+      text-align: center;
+      padding: 12px;
+      background: #ffe4e9;
+      color: #c94c62;
+      font-size: 11px;
+      font-weight: bold;
+      border-top: 1px solid #ffccd5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header & Menu Navigasi -->
+  <header>
+    <div class="logo">💖 SHES Strap</div>
+    <nav>
+      <a href="tampilan.html" target="konten">Profil</a>
+      <a href="isi.html" target="konten">Katalog</a>
+      <a href="kontak.html" target="konten">Kontak</a>
+         </nav>
+  </header>
+
+  <!-- Area Konten Utama -->
+  <iframe src="tampilan.html" name="konten" class="content-frame"></iframe>
+
+  <!-- Footer Keterangan Tugas ASAS -->
+  <footer>
+    Website ini dibuat untuk memenuhi nilai Tugas Asesmen Sumatif Akhir Semester (ASAS) Informatika.
+  </footer>
+
+</body>
+</html>
